@@ -20,8 +20,28 @@ class Ninja {
         this.health += 10
     }
 }
+
+class Sensei extends Ninja {
+    constructor(name, health, speed= 10, strength=10, wisdom = 10){
+        super(name, health, speed, strength);
+        this.wisdom = wisdom
+    }
+    speakWisdom(){
+        console.log(
+            `Karate training will make you strong and confident, but restraint will make you respected`
+        );
+    }
+}
+
 const ninja1 = new Ninja("Hyabusa", 10);
 ninja1.sayName();
 ninja1.drinkSake();
 ninja1.showStats();
+
+const ninja2 = new Sensei("Baki Hanna",200);
+ninja2.speakWisdom();
+ninja1.drinkSake();
+ninja2.showStats();
+
+
 
